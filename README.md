@@ -10,7 +10,7 @@ This project leverages machine learning to identify fraudulent transactions in c
 
 - **Goal**: Build a robust fraud detection system with high accuracy and interpretability.
 - **Environment**: Designed for Google Colab with Google Drive integration.
-- **Current Date**: *12:39 PM IST, Monday, August 11, 2025*
+- **Current Date**: *, Monday, August 11, 2025*
 
 ---
 
