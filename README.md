@@ -82,3 +82,37 @@ The script is divided into modular functions, executed as Colab cells:
   - `feature_names`: List of features.
   - `scaler`: Optional scaler for normalization.
 - **Output**: Probability, prediction (Yes/No), risk level.
+
+# 🎮 User Inputs for Prediction
+
+When using the interactive prediction tool, enter numerical values for these features. The model assesses fraud risk based on your input.
+
+---
+
+## 📋 Input Details
+
+Enter only numbers (floats or integers) for each field. The script will validate your input. Here's a breakdown of each feature, its meaning, and example values:
+
+| **Feature**       | **Description**                                      | **Example Value** | **Notes**                                      |
+|-------------------|-----------------------------------------------------|-------------------|-----------------------------------------------|
+| `amt`             | Transaction amount in dollars                       | 500.00            | Higher values may indicate risk.              |
+| `amt_log`         | Logarithmic transformation of amount                | 6.21              | Use `np.log1p(amt)`; normalizes data.         |
+| `city_pop`        | Population of cardholder's city                     | 100000            | Larger cities may have unique patterns.       |
+| `hour`            | Hour of transaction (24-hour format)                | 14                | Unusual hours (e.g., 0-3) flag fraud.         |
+| `day_of_week`     | Day of week (0=Monday to 6=Sunday)                  | 4                 | Weekends (5-6) might be riskier.              |
+| `month`           | Month of transaction (1=Jan to 12=Dec)              | 5                 | Captures seasonal trends (e.g., holidays).    |
+| `age`             | Cardholder's age in years                           | 35                | Certain ages may correlate with fraud.        |
+| `gender_encoded`  | Encoded gender (0=female, 1=male)                   | 1                 | Categorical feature from training.            |
+| `category_encoded`| Encoded merchant category (e.g., 0=grocery)         | 0                 | High-risk categories trigger alerts.          |
+| `state_encoded`   | Encoded state or region (e.g., 1=California)        | 1                 | Captures location-based trends.               |
+| `distance`        | Distance to merchant (e.g., km)                     | 50                | Large distances suggest remote fraud.         |
+
+---
+
+## 💡 Tips
+- **Calculate `amt_log`**: Use:
+  ```python
+  import numpy as np
+  amt = 500.00
+  amt_log = np.log1p(amt)  # e.g., 6.21
+  print(amt_log)
