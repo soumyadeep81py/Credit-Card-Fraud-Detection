@@ -21,7 +21,7 @@ This project leverages machine learning to identify fraudulent transactions in c
 - Google Colab (access at [colab.research.google.com](https://colab.research.google.com)).
 - Python libraries: `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`.
 - Dataset files: `fraudTrain.csv` (335 MB) and `fraudTest.csv` (143.4 MB).
-- `https://www.kaggle.com/datasets/kartik2112/fraud-detection`(https://www.kaggle.com/datasets/kartik2112/fraud-detection)
+- `Direct Link`(https://www.kaggle.com/datasets/kartik2112/fraud-detection)
 
 ### Installation
 1. **Clone the Repository**:
